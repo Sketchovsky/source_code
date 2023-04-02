@@ -1,0 +1,2 @@
+# python strategy_finder/main.py --input data/before_optimization --output data/after_optimization --run tse
+python strategy_finder/main.py --input data/before_optimization --output data/after_optimization --run gd --timeout_O1 5 --timeout_O2 5

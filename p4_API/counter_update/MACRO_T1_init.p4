@@ -1,0 +1,74 @@
+#define T1_INIT(D, KEY, WIDTH, I) \
+    T1_KEY_UPDATE_##KEY##_##WIDTH##(32w0x30243f0b) update_##D##_##I; \
+
+
+
+/******************* T1_INIT without HH *******************/
+
+#define T1_INIT_1(D, KEY, WIDTH) \
+    T1_INIT(D, KEY, WIDTH, 1) \
+
+
+#define T1_INIT_2(D, KEY, WIDTH) \
+    T1_INIT(D, KEY, WIDTH, 1) \
+    T1_INIT(D, KEY, WIDTH, 2) \
+
+
+#define T1_INIT_3(D, KEY, WIDTH) \
+    T1_INIT(D, KEY, WIDTH, 1) \
+    T1_INIT(D, KEY, WIDTH, 2) \
+    T1_INIT(D, KEY, WIDTH, 3) \
+
+
+#define T1_INIT_4(D, KEY, WIDTH) \
+    T1_INIT(D, KEY, WIDTH, 1) \
+    T1_INIT(D, KEY, WIDTH, 2) \
+    T1_INIT(D, KEY, WIDTH, 3) \
+    T1_INIT(D, KEY, WIDTH, 4) \
+
+
+#define T1_INIT_5(D, KEY, WIDTH) \
+    T1_INIT(D, KEY, WIDTH, 1) \
+    T1_INIT(D, KEY, WIDTH, 2) \
+    T1_INIT(D, KEY, WIDTH, 3) \
+    T1_INIT(D, KEY, WIDTH, 4) \
+    T1_INIT(D, KEY, WIDTH, 5) \
+
+
+
+
+/******************* WITH POLY *******************/
+
+#define T1_INIT_WITH_POLY(D, KEY, WIDTH, I, POLY) \
+    T1_KEY_UPDATE_##KEY##_##WIDTH##(POLY) update_##D##_##I; \
+
+
+#define T1_INIT_1_WITH_POLY(D, KEY, WIDTH, POLY1) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 1, POLY1) \
+
+
+#define T1_INIT_2_WITH_POLY(D, KEY, WIDTH, POLY1, POLY2) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 1, POLY1) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 2, POLY2) \
+
+
+#define T1_INIT_3_WITH_POLY(D, KEY, WIDTH, POLY1, POLY2, POLY3) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 1, POLY1) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 2, POLY2) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 3, POLY3) \
+
+
+#define T1_INIT_4_WITH_POLY(D, KEY, WIDTH, POLY1, POLY2, POLY3, POLY4) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 1, POLY1) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 2, POLY2) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 3, POLY3) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 4, POLY4) \
+
+
+#define T1_INIT_5_WITH_POLY(D, KEY, WIDTH, POLY1, POLY2, POLY3, POLY4, POLY5) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 1, POLY1) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 2, POLY2) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 3, POLY3) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 4, POLY4) \
+    T1_INIT_WITH_POLY(D, KEY, WIDTH, 5, POLY5) \
+

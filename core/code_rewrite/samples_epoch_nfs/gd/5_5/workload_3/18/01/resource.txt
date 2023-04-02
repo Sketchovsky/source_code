@@ -1,0 +1,32 @@
+              before       after  hash_reuse  hash_xor  salu_reuse  salu_merge  hfs_reuse
+hashcall  115.277778   88.888889    6.944444         0    0.000000    0.000000  19.444444
+salu      145.833333  106.250000    0.000000         0    8.333333    2.083333  29.166667
+sram       29.791667   27.812500    0.000000         0    2.083333   -0.104167   0.000000
+
+hashcall (total 72 = 6 x 12)
+before        83.0
+after         64.0
+hash_reuse     5.0
+hash_xor       0.0
+salu_reuse     0.0
+salu_merge     0.0
+hfs_reuse     14.0
+
+salu (total 48 = 4 x 12)
+before        70.0
+after         51.0
+hash_reuse     0.0
+hash_xor       0.0
+salu_reuse     4.0
+salu_merge     1.0
+hfs_reuse     14.0
+
+sram (total 960 = 80 x 12)
+before        286.0
+after         267.0
+hash_reuse      0.0
+hash_xor        0.0
+salu_reuse     20.0
+salu_merge     -1.0
+hfs_reuse       0.0
+
